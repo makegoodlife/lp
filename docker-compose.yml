@@ -1,0 +1,11 @@
+version: '3.5'
+services:
+  mgl-lp:
+    build: .
+    container_name: mgl.lp
+    command: bash -c "tail -f /dev/null"
+    volumes:
+      - .:/usr/serverless-lp
+      - /usr/serverless-lp/node_modules
+    ports:
+      - "4000:4000"
